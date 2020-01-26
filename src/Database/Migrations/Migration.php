@@ -1,6 +1,6 @@
 <?php
 
-namespace TataRysh\Database\Migrations;
+namespace TataRysh\LaravelWordpressMigration\Database\Migrations;
 
 abstract class Migration extends \Illuminate\Database\Migrations\Migration
 {

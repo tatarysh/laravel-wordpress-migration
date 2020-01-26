@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use TataRysh\Database\Migrations\Migration;
+use TataRysh\LaravelWordpressMigration\Database\Migrations\Migration;
 
 class CreateWordpressCommentMetaTable extends Migration
 {
