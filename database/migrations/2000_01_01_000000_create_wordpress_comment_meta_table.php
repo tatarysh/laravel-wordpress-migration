@@ -16,7 +16,7 @@ class CreateWordpressCommentMetaTable extends Migration
         Schema::connection($this->connection())->create('commentmeta', static function (Blueprint $table) {
             $table->bigInteger('meta_id', true)->unsigned();
             $table->bigInteger('comment_id')->unsigned()->default(0)->index('comment_id');
-            $table->string('meta_key')->nullable()->index('meta_key');
+            $table->string('meta_key')->nullable()->index('meta_key_commentmeta');
             $table->text('meta_value')->nullable();
         });
     }

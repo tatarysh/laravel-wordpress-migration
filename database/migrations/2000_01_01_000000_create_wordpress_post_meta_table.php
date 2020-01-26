@@ -16,7 +16,7 @@ class CreateWordpressPostMetaTable extends Migration
         Schema::connection($this->connection())->create('postmeta', static function (Blueprint $table) {
             $table->bigInteger('meta_id', true)->unsigned();
             $table->bigInteger('post_id')->unsigned()->default(0)->index('post_id');
-            $table->string('meta_key')->nullable()->index('meta_key');
+            $table->string('meta_key')->nullable()->index('meta_key_postmeta');
             $table->text('meta_value')->nullable();
         });
     }

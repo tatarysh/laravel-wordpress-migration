@@ -16,7 +16,7 @@ class CreateWordpressUserMetaTable extends Migration
         Schema::connection($this->connection())->create('usermeta', static function (Blueprint $table) {
             $table->bigInteger('umeta_id', true)->unsigned();
             $table->bigInteger('user_id')->unsigned()->default(0)->index('user_id');
-            $table->string('meta_key')->nullable()->index('meta_key');
+            $table->string('meta_key')->nullable()->index('meta_key_usermeta');
             $table->text('meta_value')->nullable();
         });
     }
