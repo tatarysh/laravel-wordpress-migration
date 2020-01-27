@@ -2,7 +2,7 @@
 
 return [
     /**
-     *
+     * Connection to be used to create the WordPress migrations.
      */
-    'connection' => config('corcel.connection', 'sqlite'),
+    'connection' => 'testing',
 ];

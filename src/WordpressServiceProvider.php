@@ -11,12 +11,10 @@ class WordpressServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        if (!$this->app->environment('testing')) {
-            return;
+        if ($this->app->environment('testing')) {
+            $this->mergeConfigFrom(__DIR__.'/../config/wordpress_migration.php', 'wordpress_migration');
+            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         }
-
-        $this->mergeConfigFrom(__DIR__.'/../config/wordpress_migration.php', 'wordpress_migration');
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
     /**

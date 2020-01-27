@@ -1,6 +1,6 @@
 {
   "name": "tatarysh/laravel-wordpress-migration",
-  "description": "",
+  "description": "Laravel WordPress Migration",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -14,11 +14,17 @@
     "laravel/framework": "^6.12"
   },
   "require-dev": {
-    "orchestra/testbench": "^4.0"
+    "orchestra/testbench": "^4.0",
+    "phpunit/phpunit": "^8.5"
   },
   "autoload": {
     "psr-4": {
       "TataRysh\\LaravelWordpressMigration\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
     }
   },
   "extra": {
@@ -27,5 +33,8 @@
         "TataRysh\\LaravelWordpressMigration\\WordpressServiceProvider"
       ]
     }
+  },
+  "scripts": {
+    "test": "phpunit --coverage-text --colors=never"
   }
 }
